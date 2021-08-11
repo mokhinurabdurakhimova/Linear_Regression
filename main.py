@@ -1,28 +1,28 @@
-# Kutubxonalrni chaqirib olish
+# Libraries
 import matplotlib.pyplot as plt
 import numpy as np
 
-# Ma'lumotlarni kiritish
+# Data
 x_soat = np.array([1.0, 2.0, 3.0])
 y_baho = np.array([2.0, 4.0, 6.0])
 
 
-# To'g'ri hisoblash uchun funksiya
+# Function for correctly calculating
 def forward(x):
     return x * w
 
 
-# Xatolik (Loss) ning funksiyasi
+# (Loss) Function
 def loss(x, y):
     y_pred = forward(x)
     return (y_pred - y) ** 2
 
 
-# Grafikni yaratib olishimiz uchun kontaynerlar
+# Containers for us to create a graph
 w_list = []
 mse_list = []
 
-# w ni 0 dan 4 gacha oralig'ida hisblash
+# Calculate w in the range 0 to 4
 for w in np.arange(0.0, 4.1, 0.1):
     print("w={:.3f}".format(w))
     L_umum = 0
@@ -33,12 +33,12 @@ for w in np.arange(0.0, 4.1, 0.1):
         L_umum += L_hb_qiym
         print("\t", "{:.2f}, {:.2f}, {:.2f}, {:.2f}".format(x_hb_qiym, y_hb_qiym, y_hb_bash, L_hb_qiym))
 
-    # Har bir ma'lumot uchun MSE ni hisoblaymiz
+    # Calculating MSE for each information
     print("MSE=", L_umum / len(x_soat))  # len(x_soat)--> N
     w_list.append(w)
     mse_list.append(L_umum / len(x_soat))
 
-# Grafik natija
+# Result ( Graph )
 plt.plot(w_list, mse_list)
 plt.ylabel('Loss')
 plt.xlabel('w')
