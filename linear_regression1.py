@@ -1,8 +1,9 @@
-# Libraries
+# Step 1: Import packages
 import matplotlib.pyplot as plt
 import numpy as np
 
-# Data
+
+# Step: Provide data
 x_soat = np.array([1.0, 2.0, 3.0])
 y_baho = np.array([2.0, 4.0, 6.0])
 
