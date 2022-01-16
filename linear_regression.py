@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-# Step: Provide data
+# Step 2: Provide data
 x_soat = np.array([1.0, 2.0, 3.0])
 y_baho = np.array([2.0, 4.0, 6.0])
 
@@ -23,7 +23,7 @@ def loss(x, y):
 w_list = []
 mse_list = []
 
-# Calculate w in the range 0 to 4
+# Step 3: Calculate w in the range 0 to 4
 for w in np.arange(0.0, 4.1, 0.1):
     print("w={:.3f}".format(w))
     L_umum = 0
@@ -39,7 +39,7 @@ for w in np.arange(0.0, 4.1, 0.1):
     w_list.append(w)
     mse_list.append(L_umum / len(x_soat))
 
-# Result ( Graph )
+# Step 4: Result ( Graph )
 plt.plot(w_list, mse_list)
 plt.ylabel('Loss')
 plt.xlabel('w')
