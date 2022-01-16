@@ -3,7 +3,7 @@
 Data calculation function
 
 Getting Started
-The following instructions are intended to help you get the MATLAB project up and running.
+In statistics, linear regression is a linear approach for modelling the relationship between a scalar response and one or more explanatory variables (also known as dependent and independent variables). ... Such models are called linear models.
 
 Documentation
 The results are summarized in the pdf-file assignment_1.pdf. A version including the source code used for this can be found in the file assignment_1_source.pdf.
